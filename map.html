@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-32Y0ZCCJEY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-32Y0ZCCJEY');
+</script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map | ETBD Expo</title>
+    <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="img/expo-logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navigationBar">
+        <ul>
+            <li onclick="pageLocation('index')">Home</li>
+            <li class="currentPage" onclick="pageLocation('map')">Map</li>
+            <li onclick="pageLocation('students')">Explore</li>
+            <li onclick="pageLocation('about')">About</li>
+        </ul>
+    </div>
+
+    <main class="mapPage">
+        <div class="mapHeader">
+            <h1>Explore McVey Data Science Building</h1>
+            <p>View student projects throughout the first and second floors by navigating with the map below.</p>
+        </div>
+
+        <div class="mapWrapper">
+<div class="mapContainer activeMap" id="expoMap">
+  <img src="img/OnlineMap.png" alt="ETBD Expo map" class="floorMap">
+
+    <!-- Map pins disabled
+    <button class="mapPin pin1" onclick="openMapCard('annas228')"></button>
+    <button class="mapPin pin2" onclick="openMapCard('welcomeTable')"></button>
+    <button class="mapPin pin3" onclick="openMapCard('ims452')"></button>
+    <button class="mapPin pin4" onclick="openMapCard('ims489')"></button>
+    <button class="mapPin pin5" onclick="openMapCard('ims440430')"></button>
+    <button class="mapPin pin6" onclick="openMapCard('activityFirst')"></button>
+    <button class="mapPin pin7" onclick="openMapCard('bvks228')"></button>
+    <button class="mapPin pin8" onclick="openMapCard('ims317')"></button>
+    <button class="mapPin pin9" onclick="openMapCard('artistAlley')"></button>
+    <button class="mapPin pin10" onclick="openMapCard('ims461')"></button>
+    <button class="mapPin pin11" onclick="openMapCard('ims213')"></button>
+    <button class="mapPin pin12" onclick="openMapCard('seatingGoodies')"></button>
+    <button class="mapPin pin13" onclick="openMapCard('activity204')"></button>
+    <button class="mapPin pin14" onclick="openMapCard('ims487')"></button>
+    <button class="mapPin pin15" onclick="openMapCard('foodDrinks')"></button>
+    -->
+</div>
+        </div>
+    </main>
+
+    <!-- Map info popup disabled
+    <div class="mapInfoPopup hidden" id="mapInfoPopup">
+        <div class="mapInfoBox">
+            <button class="closeInfoButton" onclick="closeMapCard()">✕</button>
+            <h2 id="mapInfoTitle">Location</h2>
+            <p id="mapInfoDescription">Description</p>
+        </div>
+    </div>
+    -->
+
+    <div class="footerHolder">
+        <div class="footer">
+            <ul>
+                <li onclick="goInstagram()">
+                    <img src="img/instagram.png" alt="Instagram">
+                </li>
+                <li onclick="goFacebook()">
+                    <img src="img/facebook.png" alt="Facebook">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

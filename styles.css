@@ -1,0 +1,1057 @@
+body{
+    margin: 0;
+    background-image: url(img/background.png);
+    background-size: fill;
+    background-position: center;
+    min-height: 100vh;
+    background-color: #c1121f;
+    padding-top: 9vh;
+    padding-bottom: 10vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.navigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: linear-gradient(
+        90deg,
+        rgba(248, 243, 234, 0.95),
+        rgba(248, 243, 234, 0.75)
+    );
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 0.1vh solid rgba(234, 223, 206, 0.8);
+    box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.06);
+}
+
+.navigationBar ul{
+    width: 90%;
+    max-width: 1000px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigationBar ul li{
+    list-style: none;
+    padding: 0.8vh 1.5vh;
+    border-radius: 999px;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 2.1vh;
+    font-weight: 700;
+    color: #8f1d22;
+    background: none;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.navigationBar ul li:hover{
+    cursor: pointer;
+    background-color: rgba(193, 18, 31, 0.08);
+    color: #c1121f;
+}
+
+.navigationBar ul li.currentPage{
+    background-color: #c1121f;
+    color: #f8f3ea;
+    padding: 0.8vh 2vh;
+}
+
+.welcome{
+    color: #ffffff;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    width: 100%;
+    margin-top: 18vh;
+    font-size: 4vh;
+    line-height: 5.5vh;
+}
+
+.welcome span{
+    font-size: 10vh;
+    font-weight: 900;
+}
+
+.weMakeCoolStuff{
+    font-size: 2vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    animation: linear weMakeCoolStuff infinite 4s;
+}
+
+@keyframes weMakeCoolStuff{
+    0%{
+        font-family: 'Barlow Semi Condensed', sans-serif;
+    }
+    10%{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    20%{
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    30%{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    40%{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    50%{
+        font-family:'Times New Roman', Times, serif;
+    }
+    60%{
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    70%{
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    80%{
+        font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+    90%{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+    }
+    100%{
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+.introPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.popupBox{
+    width: 40%;
+    min-width: 300px;
+    padding: 3vh;
+    background-color: #c1121f;
+    border: 0.2vh solid #ffffff;
+    border-radius: 2vh;
+    color: white;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.popupBox h1{
+    margin-top: 0;
+    font-size: 3vh;
+}
+
+.popupBox p{
+    font-size: 1.8vh;
+    line-height: 1.5;
+}
+
+.popupBox ul{
+    text-align: left;
+    margin: 2vh auto;
+    width: 80%;
+}
+
+.popupBox li{
+    margin-bottom: 1vh;
+    font-size: 1.6vh;
+}
+
+.popupBox button {
+    padding: 1vh 2vh;
+    border: 0.1vh solid #f8f3ea;
+    background-color: #f8f3ea;
+    color: #c1121f;
+    border-radius: 1vh;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.popupBox button:hover {
+    background-color: #c1121f;
+    color: #f8f3ea;
+    border: 0.1vh solid #f8f3ea;
+}
+
+.class .title{
+    font-size: 2.2vh;
+    font-weight: 900;
+    color: #c1121f;
+    margin-bottom: 1vh;
+    padding-bottom: 0.5vh;
+    border-bottom: 0.2vh solid #f0f0f0;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+.class .IMS213B_IntroductiontoGameDevelopment::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students learn the fundamentals of 2D game development through guided challenges that build basic programming and art skills with instructional support.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS228C_CollaborativeLaboratory::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Collaborative team projects focused on portfolio and client-style work.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS452B_SeniorDegreeProject::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Final capstone project combining research, design, and execution.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS430A_ImmersiveReactive1_Tools::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students learn to create immersive and interactive digital art experiences using real-time software for installations, XR, projection mapping, and virtual production.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+
+
+
+
+
+
+
+.class .IMS228B_CollaborativeLaboratory::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students collaborate on self-directed projects using emerging technologies, building portfolio work while receiving mentorship from faculty and industry professionals.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS375_HumanRobotInteraction::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students study foundational robotics concepts and human-robot interaction while researching societal issues and developing a project involving a humanoid robot interacting with people.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS415A_AdvancedUsabilityandUserExperience::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students collaborate in small groups with a real client to conduct user experience research, analyze findings, and design a wireframed, clickable prototype with final recommendations, without coding.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS452A_SeniorDegreeProject::after{
+    width: 80%;
+    margin-left: 10%;
+    content: " Final capstone project combining research, design, and execution.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS461A_VirtualReality::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students study and create VR and 3D experiences, including simulations, motion tracking, and data visualization, with an emphasis on building applications in immersive environments.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS487A_GamePrototypingPipelineandProduction::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students learn video game production pipelines and interdisciplinary team development while creating small, original, playable real-time game prototypes.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS487_GamePrototyping::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students learn video game production pipelines and interdisciplinary team development while creating small, original, playable real-time game prototypes.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .IMS489_GameProduction::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "Students move from pre-production into production on their final capstone games.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class .Independent::after{
+    width: 80%;
+    margin-left: 10%;
+    content: "A collection of independent projects by students.";
+    height: fit-content;
+    color: #000000;
+    text-align: center;
+    font-weight: 200;
+    font-size: 2vh;
+}
+.class{
+    /* background-color: #bababa; */
+    width: 80%;
+    margin: 3vh auto;
+    padding: 2vh;
+    border-radius: 1.5vh;
+    border: 1px solid #eadfce;
+    background-color: #ffffff;
+    box-shadow: 0 0.5vh 1.5vh rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.class:hover {
+    transform: translateY(-0.3vh);
+    box-shadow: 0 0.8vh 2vh rgba(0,0,0,0.12);
+}
+
+.students{
+    width: 80%;
+    margin-left: 10%;
+    color: #000000;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    margin-top: 10vh;
+    background-color: #f8f3ea;
+    border-radius: 1vh;
+    padding-bottom: 1vh;
+    padding-top: 2vh;
+    margin-bottom: 10vh;
+    padding: 4vh 0;
+}
+
+.student{
+    background-color: #ffffff;
+    border-radius: 2vh;
+    margin-bottom: 1vh;
+    padding: 1vh;
+    width: fit-content;
+    padding-right: 10vh;
+}
+
+.search {
+    width: 80%;
+    margin-left: 8%;
+    padding: 1.2vh 2vh;
+    border-radius: 999px;
+    background-color: #f8f3ea;
+    color: #8f1d22;
+    font-size: 1.6vh;
+    border: 0.1vh solid #eadfce;
+    box-shadow: inset 0 0.2vh 0.6vh rgba(0,0,0,0.04);
+    outline: none;
+    transition: all 0.2s ease;
+    cursor: text;
+}
+
+.search:focus {
+    border-color: #c1121f;
+    box-shadow: 0 0 0 0.3vh rgba(193, 18, 31, 0.15);
+}
+
+.students .title{
+    text-align: center;
+    font-weight: 900;
+    padding-right: 4vh;
+    padding-left: 4vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.studentList {
+    padding-left: 0;
+    margin: 0;
+}
+
+.studentList li {
+    padding: 0.8vh 1vh;
+    margin: 0.5vh 0;
+    border-radius: 0.8vh;
+    transition: background 0.2s ease;
+}
+
+.studentList li:hover {
+    background-color: #f7f7f7;
+}
+
+.studentList ul{
+    list-style-type: none;
+    padding-left: 4vh;
+}
+
+.students .red::before,
+.students .orange::before,
+.students .yellow::before,
+.students .green::before,
+.students .blue::before{
+    content: '';
+    display: inline-block;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    margin-right: 0.5vh;
+}
+
+.students .red::before{
+    background-color: #f00000;
+}
+
+.students .orange::before{
+    background-color: #f0a000;
+}
+
+.students .yellow::before{
+    background-color: #efd126;
+}
+
+.students .green::before{
+    background-color: #0bc52a;
+}
+
+.students .blue::before{
+    background-color: #0f82cf;
+}
+
+.about{
+    width: 90%;
+    max-width: 700px;
+    margin: 14vh auto 10vh auto;
+    text-align: left; 
+}
+
+.student .artistAlley::before{
+    background-color: #f0a000;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.student .xrStage::before{
+    background-color: #50de5c;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.student .refreshments::before{
+    background-color: #d958bf;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+
+.student .room203::before{
+    background-color: #f00004;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.student .artistAlley::before{
+    background-color: #f0a000;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.student .room160::before{
+    background-color: #1ec7ab;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.student .other::before{
+    background-color: #2a2a2a;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.student .lobby::before{
+    background-color: #9dd9e1;
+    width: 1vh;
+    height: 1vh;
+    border-radius: 0.5vh;
+    content: "";
+    display: inline-block;
+    margin-right: 1vh;
+}
+.about .title{
+    font-size: 4vh;
+    font-weight: 900;
+    margin-bottom: 1vh;
+    color: #c1121f;
+    background-color: #ffffff;
+    width: fit-content;
+    padding: 0.4vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.section{
+    background-color: #ffffff;
+    color: #c1121f;
+    border-radius: 1.5vh;
+    padding: 2vh 2.5vh;
+    margin-bottom: 2vh;
+    box-shadow: 0 0.5vh 1vh rgba(0,0,0,0.1);
+    border: 1px solid #eadfce;
+}
+
+.information, .section p{
+    font-size: 1.8vh;
+    line-height: 1.7;
+}
+
+.footerHolder{
+    width: 100%;
+    height: 8vh;
+    background-color: #c1121f50;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 900;
+}
+
+.footer{
+    margin-bottom: 2vh;
+    justify-content: center;
+    width: 40%;
+    margin-left: 30%;
+}
+
+.footer ul{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-left: 0vh;
+    padding-left: 0vh;
+}
+
+.footer ul li{
+    list-style-type: none;
+    padding-left: 0vh;
+    margin-left: 0vh;
+}
+
+.footer ul li img{
+    height: 4vh;
+}
+
+.mapPage{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 12vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.mapHeader{
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 3vh;
+}
+
+.mapHeader h1{
+    margin-bottom: 1vh;
+    font-size: 4vh;
+}
+
+.mapHeader p{
+    margin-top: 0;
+    font-size: 2vh;
+}
+
+.mapWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 12vh;
+}
+
+.mapContainer{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    background-color: #ffffff;
+    border-radius: 1vh;
+    padding: 1.5vh;
+    box-sizing: border-box;
+    box-shadow: 0 0.5vh 1.5vh rgba(0,0,0,0.12);
+}
+
+.mapContainer.activeMap{
+    display: block;
+}
+
+.floorMap{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 0.5vh;
+}
+
+.mapPin{
+    position: absolute;
+    width: 1.8%;
+    min-width: 16px;
+    max-width: 24px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    border: 0.18vw solid #ffffff;
+    background-color: #ff1d1d;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 0.15vw rgba(0,0,0,0.2);
+    z-index: 5;
+}
+
+.mapPin:hover{
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.pin1{ left: 21.7%; top: 13.8%; }   /* Anna's IMS 228 */
+.pin2{ left: 47.8%; top: 13.5%; }   /* Welcome Table */
+.pin3{ left: 61.2%; top: 13.4%; }   /* IMS 452 */
+.pin4{ left: 83.4%; top: 14.3%; }   /* IMS 489 */
+.pin5{ left: 80.2%; top: 20.9%; }   /* IMS 440 + IMS 430 */
+.pin6{ left: 42.6%; top: 44.1%; }   /* Activity */
+.pin7{ left: 52.0%; top: 43.4%; }   /* BVK's IMS 228 */
+.pin8{ left: 46.9%; top: 66.0%; }   /* IMS 317 */
+.pin9{ left: 55.2%; top: 84.2%; }   /* Artist Alley */
+.pin10{ left: 20.4%; top: 88.5%; }  /* IMS 461 */
+.pin11{ left: 43.3%; top: 93.8%; }  /* IMS 213 */
+.pin12{ left: 24.8%; top: 94.7%; }  /* Seating / Goodies */
+.pin13{ left: 42.5%; top: 98.2%; }  /* Activity 204 */
+.pin14{ left: 60.6%; top: 96.5%; }  /* IMS 487 */
+.pin15{ left: 47.2%; top: 69.7%; }  /* Food / Drinks */
+
+.mapInfoPopup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background-color: rgba(30, 20, 10, 0.55);
+}
+
+.mapInfoPopup.hidden{
+    display: none;
+}
+
+.mapInfoBox{
+    position: relative;
+    width: 40%;
+    min-width: 300px;
+    max-width: 520px;
+    background-color: #f8f3ea;
+    color: #161616;
+    border-radius: 2vh;
+    padding: 3vh;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.mapInfoBox h2{
+    margin-top: 0;
+    color: #c1121f;
+    font-size: 3vh;
+}
+
+.mapInfoBox p{
+    font-size: 1.8vh;
+    line-height: 1.5;
+}
+
+.closeInfoButton{
+    position: absolute;
+    top: 1.2vh;
+    right: 1.2vh;
+    border: none;
+    background: none;
+    font-size: 2.5vh;
+    cursor: pointer;
+    color: #c1121f;
+    font-weight: bold;
+}
+
+.ctaButton{
+    margin-top: 3vh;
+    padding: 1.2vh 3vh;
+    background-color: #f8f3ea;
+    color: #c1121f;
+    border: 0.1vh solid #f8f3ea;
+    font-weight: 800;
+    border-radius: 2vh;
+    font-size: 2vh;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: block;
+    width: fit-content;
+    margin: 3vh auto;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.about {
+   width: 90%;
+   max-width: 800px;
+   margin: 40px auto;
+   text-align: center;
+   margin-top: 14vh;
+}
+
+.title{
+    font-size: 3.5vh;
+    font-weight: 800;
+    margin-bottom: 2vh;
+    text-align: center;
+}
+
+.title::after{
+    content: '';
+    display: block;
+    width: 6vh;
+    height: 0.3vh;
+    background-color: #ffffff;
+    margin: 1vh auto 0 auto;
+}
+
+.aboutPage{
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 12vh;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.aboutHeader{
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 3vh;
+}
+
+.aboutHeader h1{
+    margin-bottom: 1vh;
+    font-size: 4vh;
+}
+
+.aboutHeader p{
+    margin-top: 0;
+    font-size: 2vh;
+}
+
+.aboutContainer{
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 1vh;
+    padding: 2vh;
+    box-sizing: border-box;
+    border: 1px solid #eadfce;
+}
+
+.aboutCard{
+    margin-bottom: 2vh;
+    font-size: 2.2vh;
+    line-height: 1.6;
+    color: #c1121f;
+}
+
+.aboutCTA{
+    margin-top: 3vh;
+    margin-bottom: 10vh;
+    text-align: center;
+    padding: 1vh 2vh;
+    background-color: #f8f3ea;
+    color: #c1121f;
+    border: 0.1vh solid #f8f3ea;
+    border-radius: 1vh;
+    font-weight: 800;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.aboutCTA:hover{
+    background-color: #c1121f;
+    color: #ffffff;
+}
+
+.information {
+   font-size: 1em;
+   line-height: 1.6;
+}
+
+.aboutImage{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3vh;
+}
+
+.aboutImage img{
+    width: 100%;
+    max-width: 950px; 
+    border-radius: 1vh;
+    object-fit: cover;
+}
+
+.carousel-container {
+   position: relative;
+   overflow: hidden;
+   width: 90%;
+   max-width: 600px;
+   margin: 40px auto;
+   background-color: #f0f0f0;
+   padding-bottom: 20px;
+   border-radius: 10px;
+}
+
+.carousel-wrapper {
+   position: relative;
+}
+
+.carousel-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0,0,0,0.6);
+   color: white;
+   border: none;
+   padding: 10px 14px;
+   cursor: pointer;
+   border-radius: 50%;
+   font-size: 24px;
+   z-index: 20;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+.carousel-track {
+   display: flex;
+   transition: transform 0.4s ease-in-out;
+   gap: 10px;
+}
+
+.carousel-track img {
+   flex: 0 0 auto;
+   width: 200px;
+   aspect-ratio: 1 / 1;
+   object-fit: cover;
+   border-radius: 5px;
+}
+
+.carousel .indicators {
+    bottom: 10px !important;
+}
+
+.carousel .indicators .indicator-item {
+    margin: 0 8px !important;
+}
+
+.footerHolder {
+    margin-top: 20px;
+}
+
+.carousel-btn {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   background-color: rgba(0,0,0,0.5);
+   color: white;
+   border: none;
+   padding: 10px 15px;
+   cursor: pointer;
+   border-radius: 50%;
+   font-size: 18px;
+   z-index: 10;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+@media screen and (max-width: 768px){
+    .mapPage{
+        width: 96%;
+        margin-left: 2%;
+        margin-top: 11vh;
+    }
+
+    .mapHeader h1{
+        font-size: 3vh;
+    }
+
+    .mapHeader p,
+    .mapInfoBox p{
+        font-size: 1.7vh;
+    }
+
+    .mapInfoBox{
+        width: 88%;
+    }
+
+    .mapPin{
+        width: 2.4%;
+        min-width: 10px;
+        max-width: 14px;
+    }
+
+    .popupBox{
+        width: 88%;
+    }
+
+    .carousel-track img {
+        width: 120px;
+    }
+}
+
+.carousel {
+    height: 320px;
+    margin-top: 60px;
+    margin-bottom: 120px;
+}
+
+.carousel .carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.carousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .carousel {
+        height: 240px;
+    }
+
+    .carousel .carousel-item {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+
+.homeLinksCard {
+    width: 85%;
+    max-width: 550px;
+    margin: 4vh auto 3vh auto;
+    background-color: rgba(248, 243, 234, 0.95);
+    border: 0.1vh solid #eadfce;
+    border-radius: 2vh;
+    padding: 2.5vh;
+    box-sizing: border-box;
+    box-shadow: 0 1vh 2vh rgba(0,0,0,0.08);
+    text-align: center;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+.homeLinksTitle {
+    font-size: 2.2vh;
+    font-weight: 800;
+    color: #8f1d22;
+    margin-bottom: 2vh;
+}
+
+.homeLinkItem {
+    background-color: #fffaf2;
+    border: 0.1vh solid #eadfce;
+    border-radius: 1.5vh;
+    padding: 1.5vh;
+    margin-bottom: 1.5vh;
+}
+
+.homeLinkItem:last-child {
+    margin-bottom: 0;
+}
+
+.homeLinkLabel {
+    font-size: 1.6vh;
+    font-weight: 700;
+    color: #8f1d22;
+    margin-bottom: 0.8vh;
+}
+
+.homeLinkItem a {
+    display: inline-block;
+    padding: 0.8vh 1.8vh;
+    border-radius: 999px;
+    background-color: #c1121f;
+    color: #f8f3ea;
+    text-decoration: none;
+    font-size: 1.5vh;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.homeLinkItem a:hover {
+    background-color: #8f1d22;
+    transform: translateY(-0.1vh);
+}
