@@ -3,6 +3,7 @@
 <head>
 
 <!-- Google tag (gtag.js) -->
+<head>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-32Y0ZCCJEY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -46,9 +47,19 @@
         </div>
     </div>
 
-    <div class="live-stream">
-<iframe src="https://player.twitch.tv/?channel=legowest77&parent=wemakecoolstuff.org" frameborder="0" allowfullscreen="true" scrolling="no" height="378" width="620"></iframe>
-    </div>
+<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
+<div id="<player div ID>"></div>
+<script type="text/javascript">
+  var options = {
+    width: 1280,
+    height: 720,
+    channel: "<legowest77>",
+    // only needed if your site is also embedded on embed.example.com and othersite.example.com
+    parent: ["wemakecoolstuff.org"]
+  };
+  var player = new Twitch.Player("<player div ID>", options);
+  player.setVolume(0.5);
+</script>
 
 <div class="homeLinksCard">
     <div class="homeLinksTitle">Before You Explore</div>
