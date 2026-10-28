@@ -1069,3 +1069,10 @@ body{
     text-align: center;
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
+#<player div id> {
+      display: flex; justify-content: center;
+    width: 100%;
+    height: 400px;
+    max-width: 800px;
+    border-radius: 1vh;
+}
